@@ -1,0 +1,13 @@
+<mxfile host="65bd71144e">
+    <diagram id="sxl1ICKyWtYX2NkEeBBf" name="Page-1">
+        <mxGraphModel dx="640" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="WALMART WEEKLY SALES KPI TREE (Store + Dept + Holiday)&#xa;&#xa;&#xa;NORTH STAR&#xa;└── Total Weekly Sales ($)&#xa;    (SUM Weekly_Sales across all stores &amp; departments)&#xa;&#xa;&#xa;LEVEL 1 DRIVERS&#xa;├── 1) Sales Volume / Mix&#xa;│   ├── Sales by Store&#xa;│   ├── Sales by Department&#xa;│   ├── Sales by Store Type (A/B/C)&#xa;│   ├── Sales per Store (productivity proxy)&#xa;│   └── Sales per Sq Ft (using Store Size)&#xa;│&#xa;├── 2) Growth&#xa;│   ├── WoW % Change (week-over-week)&#xa;│   ├── YoY % Change (same week number, prior year)&#xa;│   ├── Rolling Trend (4w / 8w moving average)&#xa;│   └── Top Movers (stores/depts driving change)&#xa;│&#xa;├── 3) Seasonality &amp; Holiday Impact&#xa;│   ├── Holiday Lift % (holiday vs non-holiday)&#xa;│   ├── Holiday Contribution (% of sales during holiday weeks)&#xa;│   └── Holiday Sensitivity by Store/Dept (lift ranking)&#xa;│&#xa;└── 4) Stability / Volatility (Risk)&#xa;    ├── Volatility Index (std/mean over rolling N weeks)&#xa;    ├── Forecast Error (optional: simple baseline forecast)&#xa;    └── At-Risk Score (declining trend + high volatility + negative WoW/YoY)&#xa;&#xa;&#xa;ACTION OUTPUTS (What leaders do)&#xa;├── At-Risk Stores/Depts → prioritize investigation &amp; operational actions&#xa;├── High-Opportunity Stores/Depts → invest/replicate what works&#xa;└── Planning Signals → holiday readiness + volatility-informed staffing/inventory" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="85" y="110" width="680" height="690" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
