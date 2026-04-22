@@ -50,7 +50,7 @@ st.markdown("""
         align-items: center;
         margin-bottom: 20px;
     }
-    .top-banner h2 { margin: 0; font-size: 16px; font-weight: 500; }
+    .top-banner h2 { margin: 0; font-size: 20px; font-weight: 500; }
     .top-banner span { font-size: 20px; opacity: 0.85; }
 
     /* Insight card */
@@ -71,13 +71,13 @@ st.markdown("""
         width: 30px; height: 30px;
         border-radius: 50%;
         display: flex; align-items: center; justify-content: center;
-        font-size: 13px; font-weight: 600;
+        font-size: 20px; font-weight: 600;
         flex-shrink: 0;
     }
-    .ins-title { font-size: 15px; font-weight: 600; color: #202124; line-height: 1.3; }
+    .ins-title { font-size: 20px; font-weight: 600; color: #202124; line-height: 1.3; }
     .ins-tag {
         display: inline-block;
-        font-size: 10px; font-weight: 500;
+        font-size: 20px; font-weight: 500;
         padding: 2px 9px; border-radius: 20px;
         margin-bottom: 8px;
     }
