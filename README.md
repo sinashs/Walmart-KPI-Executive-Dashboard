@@ -4,6 +4,7 @@
 
 A Business Intelligence project that transforms raw operational sales data into executive-ready insights, KPI governance, and proactive risk monitoring.
 
+
 ## Live Dashboard
 [Open the Interactive Dashboard](https://walmart-executive-dashboard.streamlit.app/)
 
@@ -70,7 +71,10 @@ Walmart-Dashboard/
     ├── page1_executive_kpis.py
     ├── page2_top_movers.py
     ├── page3_at_risk.py
-    └── page4_metric_dictionary.py
+    ├── page4_metric_dictionary.py
+    └── page5_insights.py
+    
+
 ```
 
 ---
