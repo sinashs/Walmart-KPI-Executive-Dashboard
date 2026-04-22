@@ -7,6 +7,9 @@ A Business Intelligence project that transforms raw operational sales data into 
 ## Live Dashboard
 [View the Streamlit Dashboard](https://walmart-executive-dashboard.streamlit.app/)
 
+## Live Dashboard
+🚀 <a href="https://walmart-executive-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer"><strong>Open Interactive Dashboard</strong></a>
+
 
 This project demonstrates a full BI workflow:
 
