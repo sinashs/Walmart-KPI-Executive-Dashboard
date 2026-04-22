@@ -4,6 +4,10 @@
 
 A Business Intelligence project that transforms raw operational sales data into executive-ready insights, KPI governance, and proactive risk monitoring.
 
+## Live Dashboard
+[View the Streamlit Dashboard](https://walmart-executive-dashboard.streamlit.app/)
+
+
 This project demonstrates a full BI workflow:
 
 ### Data Warehouse → SQL Modeling → KPI Views → Streamlit Dashboard
