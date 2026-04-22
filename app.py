@@ -129,9 +129,16 @@ pg4 = st.Page(
     icon="📘",
 )
 
+pg5 = st.Page(
+    os.path.join(BASE_DIR, "pages/page5_insights.py"),
+    title="Key Insights",
+    icon="💡",
+)
+
 # ── Navigation ────────────────────────────────────────────────────────────────
 #
 #   Pages are grouped into two sections in the sidebar:
+#     • Insights   — executive summary and key takeaways
 #     • Dashboard  — the three analytical pages
 #     • Reference  — the metric dictionary
 #
@@ -140,6 +147,7 @@ pg4 = st.Page(
 #
 pg = st.navigation(
     {
+        "Insights":  [pg5],
         "Dashboard": [pg1, pg2, pg3],
         "Reference": [pg4],
     },
