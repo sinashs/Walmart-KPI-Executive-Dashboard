@@ -139,6 +139,7 @@ Includes:
 
 Built in `page1_executive_kpis.py` 
 
+![Executive KPIs Dashboard](screenshots/Walmart_Executive_KPIs___Streamlit-1.jpg)
 ---
 
 ## 2️⃣ Top Movers
