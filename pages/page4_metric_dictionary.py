@@ -12,6 +12,10 @@ METRIC_FILE = os.path.join(BASE_DIR, "metric_dictionary.md")
 
 st.markdown("""
 <style>
+    /* Hide default Streamlit header/footer */
+    #MainMenu, footer, header { visibility: visible; }
+
+    /* Top banner */
     .top-banner {
         background: #0D47A1;
         color: white;
