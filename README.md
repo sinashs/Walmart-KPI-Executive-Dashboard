@@ -4,11 +4,6 @@
 
 A Business Intelligence project that transforms raw operational sales data into executive-ready insights, KPI governance, and proactive risk monitoring.
 
-
-## Live Dashboard
-[Open the Interactive Dashboard](https://walmart-executive-dashboard.streamlit.app/)
-
-
 This project demonstrates a full BI workflow:
 
 ### Data Warehouse → SQL Modeling → KPI Views → Streamlit Dashboard
@@ -17,9 +12,14 @@ I first used **Google Cloud BigQuery** to build curated views and SQL logic for 
 
 ---
 
+## Live Dashboard
+[Open the Interactive Dashboard](https://walmart-executive-dashboard.streamlit.app/)
+
+---
+
 # 📌 Business Objective
 
-Executives don’t need spreadsheets — they need decisions.
+Executives don't need spreadsheets — they need decisions.
 
 This dashboard helps leadership answer:
 
@@ -46,7 +46,7 @@ This dashboard helps leadership answer:
 
 # 🏗️ End-to-End Architecture
 
-```text id="2yk3bp"
+```text
 Raw Walmart Data
       ↓
 BigQuery Tables
@@ -62,19 +62,21 @@ Executive Dashboard Pages
 
 # 📂 Project Structure
 
-```text id="n1es9h"
+```text
 Walmart-Dashboard/
 │
 ├── app.py
 ├── metric_dictionary.md
+├── Walmart-Logo.jpg
+├── raw_sales.csv
+├── raw_stores.csv
+│
 └── pages/
     ├── page1_executive_kpis.py
     ├── page2_top_movers.py
     ├── page3_at_risk.py
     ├── page4_metric_dictionary.py
     └── page5_insights.py
-    
-
 ```
 
 ---
@@ -137,9 +139,10 @@ Includes:
 * Store Type Mix
 * Volatility Index
 
-Built in `page1_executive_kpis.py` 
+Built in `page1_executive_kpis.py`
 
 ![Executive KPIs Dashboard](screenshots/Walmart_Executive_KPIs___Streamlit-1.jpg)
+
 ---
 
 ## 2️⃣ Top Movers
@@ -154,9 +157,10 @@ Includes:
 * Department growth shifts
 * Store trends
 
-Built in `page2_top_movers.py` 
+Built in `page2_top_movers.py`
 
 ![Top Movers Dashboard](screenshots/Walmart_Top_Movers___Streamlit-1.jpg)
+
 ---
 
 ## 3️⃣ At-Risk Stores
@@ -165,45 +169,99 @@ Prioritization dashboard using weighted risk logic.
 
 Risk Formula:
 
-```text id="9v8j5z"
+```text
 50% Trend Decline
 30% Volatility
 20% Recent WoW Drop
 ```
 
-Built in `page3_at_risk.py` 
+Built in `page3_at_risk.py`
 
 ![At-Risk Stores Dashboard](screenshots/Walmart_At-Risk_Stores___Streamlit-1.jpg)
+
 ---
 
-## 4️⃣ Metric Dictionary
+## 4️⃣ Key Insights
+
+Executive summary page with the 5 most important business findings, each backed by live data and a recommended action.
+
+Includes:
+
+* Fleet revenue trend analysis
+* Store concentration risk
+* Small store productivity paradox
+* Post-holiday cliff analysis
+* Department leverage and holiday sensitivity
+
+Built in `page5_insights.py`
+
+![Key Insights Dashboard](screenshots/Walmart_Key_Insights___Streamlit-1.jpg)
+
+---
+
+## 5️⃣ Metric Dictionary
 
 Single source of truth for definitions and formulas.
 
-Built in `page4_metric_dictionary.py` 
+Built in `page4_metric_dictionary.py`
 
 ![Metric Dictionary](screenshots/Walmart_Metric_Dictionary___Streamlit-1.jpg)
+
 ---
 
 # 📊 Key Business Insights from the Dashboard
 
-## 📈 Holiday Weeks Create Revenue Lift
+## 📉 Fleet Revenue Is Quietly Declining
 
-Holiday periods consistently outperform non-holiday weeks.
+Average weekly sales fell from $47.7M (2010) to $46.5M (2012) — roughly **$61M annualised revenue erosion** with no single event to explain it.
 
 ### Action:
-
-Increase labor scheduling, marketing spend, and inventory before holiday weeks.
+Segment the decline by store type. If Type B stores are driving it disproportionately, a format-level intervention is warranted.
 
 ---
 
-## 🏬 Few Stores Drive Large Revenue Share
+## 🏬 Top 10 Stores Carry 39% of Total Revenue
 
-Top stores contribute disproportionately to total revenue.
+The top 5 stores alone account for 21.5% of all fleet sales. The bottom 10 contribute just 8.6%.
 
 ### Action:
+Create a "Flagship Watch" report monitoring the top 10 stores weekly at exec level, separate from the broader fleet review.
 
-Use high-performing stores as operating benchmarks.
+---
+
+## 📐 Small Stores Are 38% More Productive Per Square Foot
+
+Type C stores generate **$1,667/sqft** vs **$1,092/sqft** for large Type A stores — a counterintuitive finding that challenges a "bigger is better" expansion strategy.
+
+### Action:
+Run a net margin per sqft analysis including rent and labour before approving new large-format store openings.
+
+---
+
+## 📆 The Post-Holiday Cliff Is the Most Violent Revenue Event
+
+Thanksgiving week spikes **+46% WoW**, then the week after Christmas crashes **−50%** — structurally, every year.
+
+### Action:
+Build explicit post-holiday markdown and clearance plans timed to the week of Dec 27. Prepare staff-down schedules 3 weeks in advance.
+
+---
+
+## 🏷️ Three Departments Drive 19 Cents of Every Dollar
+
+Depts 92, 95, and 38 generated **$1.33B** over the full period. Dept 99 shows a **+303% holiday lift** — the strongest in the fleet.
+
+### Action:
+Prioritise fill-rate SLAs for the top 3 revenue depts year-round. Begin holiday inventory reviews for the top 5 holiday-sensitive departments 8 weeks before Thanksgiving.
+
+---
+
+## 📈 Holiday Weeks Create Revenue Lift
+
+Holiday periods consistently outperform non-holiday weeks with a **+7.1% fleet-wide lift**.
+
+### Action:
+Increase labor scheduling, marketing spend, and inventory before holiday weeks.
 
 ---
 
@@ -212,8 +270,7 @@ Use high-performing stores as operating benchmarks.
 Stores with unstable revenue patterns appear more often in the At-Risk dashboard.
 
 ### Action:
-
-Use volatility as an early warning KPI.
+Use volatility CV as an early warning KPI in weekly executive reviews.
 
 ---
 
@@ -222,18 +279,7 @@ Use volatility as an early warning KPI.
 Stores down this week and down over 8 weeks rank highest in risk scores.
 
 ### Action:
-
-Prioritize intervention on structurally weak stores.
-
----
-
-## 📆 Moving Averages Reveal Real Trend
-
-Weekly raw revenue fluctuates, but smoothed trends reveal momentum.
-
-### Action:
-
-Use rolling averages in executive reporting.
+Prioritize intervention on structurally weak stores. Pull store manager reports for any store with a risk score above 50.
 
 ---
 
@@ -280,8 +326,8 @@ Reusable Streamlit architecture.
 
 # ▶️ Run Locally
 
-```bash id="6e4cl0"
-pip install streamlit pandas plotly numpy google-cloud-bigquery
+```bash
+pip install streamlit pandas plotly numpy Pillow
 streamlit run app.py
 ```
 
@@ -326,6 +372,6 @@ Business Intelligence Analyst focused on:
 
 ---
 
-# 📬 Let’s Connect
+# 📬 Let's Connect
 
 Open to BI / Product Analyst / Analytics opportunities.
