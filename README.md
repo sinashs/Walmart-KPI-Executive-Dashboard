@@ -156,6 +156,7 @@ Includes:
 
 Built in `page2_top_movers.py` 
 
+![Top Movers Dashboard](screenshots/Walmart_Top_Movers___Streamlit-1.jpg)
 ---
 
 ## 3️⃣ At-Risk Stores
@@ -172,6 +173,7 @@ Risk Formula:
 
 Built in `page3_at_risk.py` 
 
+![At-Risk Stores Dashboard](screenshots/Walmart_At-Risk_Stores___Streamlit-1.jpg)
 ---
 
 ## 4️⃣ Metric Dictionary
@@ -180,6 +182,7 @@ Single source of truth for definitions and formulas.
 
 Built in `page4_metric_dictionary.py` 
 
+![Metric Dictionary](screenshots/Walmart_Metric_Dictionary___Streamlit-1.jpg)
 ---
 
 # 📊 Key Business Insights from the Dashboard
